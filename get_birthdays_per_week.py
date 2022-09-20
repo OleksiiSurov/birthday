@@ -2,8 +2,6 @@ import re
 import datetime
 
 
-
-
 days = {
     'Today': [],
     'Last weekend': [],
@@ -16,28 +14,6 @@ days = {
     'Sunday': []
 }
 
-users = [
-    {'name': 'Alex',
-     'birthday': datetime.date(1988, 9, 15)},
-    {'name': 'Elina',
-     'birthday': datetime.date(2015, 9, 16)},
-    {'name': 'Juli',
-     'birthday': datetime.date(1990, 9, 17)},
-    {'name': 'Serge',
-     'birthday': datetime.date(1988, 9, 18)},
-    {'name': 'Bill',
-     'birthday': datetime.date(2015, 9, 19)},
-    {'name': 'Tessa',
-     'birthday': datetime.date(1990, 9, 20)},
-    {'name': 'John',
-     'birthday': datetime.date(2015, 9, 21)},
-    {'name': 'Anna',
-     'birthday': datetime.date(1990, 9, 22)},
-    {'name': 'asdasdas',
-     'birthday': datetime.date(2015, 9, 14)},
-    {'name': 'qweqwewqeqwewq',
-     'birthday': datetime.date(1990, 9, 13)}
-]
 
 DAY_TODAY = datetime.date.today().strftime("%A")
 
@@ -63,8 +39,8 @@ def result(n: int):
 
 def get_birthdays_per_week(users: list):
 
-    """Фнкція отримує на вхід список словників 'users' у форматі ({'name': 'Alex',
-     'birthday': datetime.date(2022, 01, 22)})  і виводить
+    """Фнкція отримує на вхід список словників 'users' у форматі ({'name': str,
+     'birthday': datetime.date(YYYY, MM, DD)})  і виводить
       список користувачів, яких потрібно привітати з днем народження по днях на тиждень вперед"""
 
     for di in users:
@@ -95,7 +71,5 @@ def get_birthdays_per_week(users: list):
 
 
     # виводимо на екран список
-    result(0)
+    return result(0)
 
-
-get_birthdays_per_week(users)
